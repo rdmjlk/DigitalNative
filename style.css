@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300&family=Playfair+Display&display=swap");
+
+body {
+  background-color: rgb(255, 255, 255);
+  background-size: cover;
+  margin: 0;
+  margin-bottom: 6em;
+  color: rgb(0, 0, 0);
+  padding: 0;
+  overflow: hidden; /* Hide horizontal scrollbar */
+}
+
+/* SCROLLBARR */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 0, 0);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(255, 255, 255);
+}
+
+h1 {
+  margin-top: 0%;
+  line-height: 110%;
+  font-family: "Helvetica";
+  font-size: 7rem;
+  padding-left: 2%;
+  margin-bottom: 4%;
+}
+
+h2 {
+  font-family: "Helvetica";
+  margin-top: 0%;
+  padding-left: 2%;
+}
+
+p {
+  display: block;
+  max-width: 38em;
+  padding-left: 6%;
+  padding-right: 2%;
+  font-size: 1rem;
+  font-family: "Arial";
+  font-weight: bold;
+}
+
+/* Lines between the paragaphs */
+hr {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+a {
+  color: red;
+}
+
+info {
+  color: red;
+  font-family: "Arial";
+  max-width: 500px;
+}
+
+#some {
+  background: black;
+  position: fixed;
+  font-size: 12pt;
+  bottom: 20px;
+  right: 20px;
+}
+
+#mark {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  position: fixed;
+  bottom: 50%;
+  text-align: center;
+  left: 49%;
+}
+
+/* Styling for dates */
+.posted_date {
+  font-family: "Times";
+}
+
+.media {
+  -webkit-filter: none;
+  position: relative;
+  filter: none;
+  height: auto;
+  width: 600px;
+  margin: 30px;
+  margin-top: 10px;
+  mix-blend-mode: multiply;
+}
+
+::selection {
+  color: rgb(255, 0, 0);
+  background: rgb(0, 0, 0);
+}
+
+.marquee {
+  position: absolute;
+  width: 100vw;
+  max-width: 100%;
+  height: 100px;
+  bottom: 0px;
+  overflow-x: hidden;
+}
+
+.track {
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 40s linear infinite;
+}
+
+.column {
+  height: 100vh;
+  width: 50%;
+  float: left;
+  overflow: scroll;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+.column_right {
+  height: 100vh;
+  width: 50%;
+  float: right;
+  overflow: scroll;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  color: rgb(255, 255, 255);
+}
+
+/* Because we like pretty things */
+.red {
+  background: rgb(255, 255, 255);
+}
+.black {
+  background: rgb(0, 0, 0);
+}
+
+#tiedot {
+  position: fixed;
+  color: red;
+  background: rgb(0, 0, 0);
+  bottom: 5%;
+  font-size: 12pt;
+  left: 20px;
+}
+
+#jalka {
+  position: fixed;
+  background: rgb(0, 0, 0);
+  font-size: 12pt;
+  top: 20px;
+  left: 20px;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(90%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .media {
+    width: 90%;
+    margin: 20px;
+    margin-top: 30px;
+  }
+}
